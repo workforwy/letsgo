@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
+    compileOptions {
+        encoding "GBK"
+    }
+
+    defaultConfig {
+        applicationId "com.wy.letsgo"
+        minSdkVersion 16
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    useLibrary 'org.apache.http.legacy'
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/jniLibs']
+            aidl.srcDirs = ['src/main/aidl']
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation files('libs/androidannotations-api-3.3.2.jar')
+    implementation files('libs/BaiduLBS_Android.jar')
+    implementation files('libs/showGif.jar')
+    implementation 'com.alibaba:fastjson:1.2.75'
+    implementation project(path: ':pullToRefresh')
+    implementation project(path: ':pullToRefresh2')
+    implementation project(path: ':progressButton')
+    implementation project(path: ':xutils')
+    implementation 'androidx.fragment:fragment:1.2.5'
+}
