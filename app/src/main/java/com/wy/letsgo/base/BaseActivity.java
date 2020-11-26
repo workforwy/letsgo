@@ -1,4 +1,4 @@
-package com.wy.letsgo.view;
+package com.wy.letsgo.base;
 
 import com.wy.letsgo.TApplication;
 

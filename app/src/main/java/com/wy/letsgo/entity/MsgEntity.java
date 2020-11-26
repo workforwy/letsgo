@@ -1,7 +1,7 @@
 package com.wy.letsgo.entity;
 /**
  * ÏûÏ¢Ä£¿é
- * @author tarena
+ * @author wy
  *
  */
 public class MsgEntity {

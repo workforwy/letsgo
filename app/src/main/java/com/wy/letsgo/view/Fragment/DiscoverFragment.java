@@ -1,7 +1,12 @@
-package com.wy.letsgo.view;
+package com.wy.letsgo.view.Fragment;
 
 import com.wy.letsgo.R;
 import com.wy.letsgo.util.ExceptionUtil;
+import com.wy.letsgo.view.ClubActivity;
+import com.wy.letsgo.view.MallActivity;
+import com.wy.letsgo.view.MyFriendActivity;
+import com.wy.letsgo.view.NearbyUserActivity;
+import com.wy.letsgo.view.TopicActivity;
 
 import android.content.Intent;
 import android.os.Bundle;

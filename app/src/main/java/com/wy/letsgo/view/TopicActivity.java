@@ -2,6 +2,7 @@ package com.wy.letsgo.view;
 
 import java.util.ArrayList;
 
+import com.wy.letsgo.base.BaseActivity;
 import com.wy.xutils.BitmapUtils;
 import com.wy.letsgo.R;
 import com.wy.letsgo.TApplication;

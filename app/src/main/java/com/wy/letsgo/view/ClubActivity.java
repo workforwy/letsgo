@@ -1,5 +1,7 @@
 package com.wy.letsgo.view;
 
+import com.wy.letsgo.base.BaseActivity;
+import com.wy.letsgo.service.JoinIntentService;
 import com.wy.letsgo.util.Const;
 import com.wy.letsgo.util.Tools;
 import com.wy.letsgo.R;
@@ -52,7 +54,7 @@ public class ClubActivity extends BaseActivity {
 			String roomName = etRoomName.getText().toString();
 			String name = etName.getText().toString();
 			
-			Intent intentStartService=new Intent(this,JoinIntentService.class);
+			Intent intentStartService=new Intent(this, JoinIntentService.class);
 			intentStartService.putExtra("roomName", roomName);
 			intentStartService.putExtra("name", name);
 

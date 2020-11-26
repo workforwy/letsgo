@@ -1,6 +1,7 @@
 package com.wy.letsgo.view;
 
 import com.wy.letsgo.TApplication;
+import com.wy.letsgo.base.BaseActivity;
 import com.wy.letsgo.biz.Factory;
 import com.wy.letsgo.biz.ILoginBiz;
 import com.wy.letsgo.entity.UserEntity;

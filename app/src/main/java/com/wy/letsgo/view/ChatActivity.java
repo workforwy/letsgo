@@ -50,6 +50,7 @@ import com.baidu.mapapi.model.LatLng;
 import com.wy.letsgo.R;
 import com.wy.letsgo.TApplication;
 import com.wy.letsgo.adapter.FaceAdapter;
+import com.wy.letsgo.base.BaseActivity;
 import com.wy.letsgo.biz.implAsmack.GroupChatBiz;
 import com.wy.letsgo.biz.implAsmack.PrivateChatBiz;
 import com.wy.letsgo.entity.GroupChatEntity;
@@ -436,7 +437,7 @@ public class ChatActivity extends BaseActivity {
 	 * 
 	 * 你的代码所有的catch要exceptionUtil.看logcat,然后用debug跟
 	 * 
-	 * @author tarena
+	 * @author wy
 	 * 
 	 */
 	class ShowGroupChatMessage extends BroadcastReceiver {

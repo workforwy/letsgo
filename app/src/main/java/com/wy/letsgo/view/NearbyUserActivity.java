@@ -11,6 +11,7 @@ import android.os.Bundle;
 import com.wy.letsgo.R;
 import com.wy.letsgo.TApplication;
 import com.wy.letsgo.adapter.NearbyUserAdapter;
+import com.wy.letsgo.base.BaseActivity;
 import com.wy.letsgo.biz.implAsmack.NearbyUserBiz;
 import com.wy.letsgo.entity.UserEntity;
 import com.wy.letsgo.util.Const;

@@ -1,6 +1,7 @@
 package com.wy.letsgo.view;
 
 import com.wy.letsgo.R;
+import com.wy.letsgo.base.BaseActivity;
 import com.wy.letsgo.util.ExceptionUtil;
 
 import android.content.Intent;

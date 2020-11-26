@@ -13,7 +13,7 @@ import com.wy.letsgo.entity.VersionEntity;
 import com.wy.letsgo.parser.UpdateParser;
 import com.wy.letsgo.util.Const;
 import com.wy.letsgo.util.ExceptionUtil;
-import com.wy.letsgo.view.MeFragment;
+import com.wy.letsgo.view.Fragment.MeFragment;
 
 import android.os.Bundle;
 import android.os.Handler;

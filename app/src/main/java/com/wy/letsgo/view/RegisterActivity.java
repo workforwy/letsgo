@@ -27,118 +27,117 @@ import android.widget.Toast;
 
 @EActivity(R.layout.activity_register)
 public class RegisterActivity extends Activity {
-	@ViewById
-	EditText et_register_username, et_register_password,
-			et_register_confirm_password, et_register_name;
-	@ViewById
-	Button btn_register_submit;
-	@ViewById
-	ImageView iv_register_selectIcon;
-	private Bitmap bitmap;
-	String username,pwd;
+    @ViewById
+    EditText et_register_username, et_register_password,
+            et_register_confirm_password, et_register_name;
+    @ViewById
+    Button btn_register_submit;
+    @ViewById
+    ImageView iv_register_selectIcon;
+    private Bitmap bitmap;
+    String username, pwd;
 
-	@Override
-	public boolean onKeyDown(int keyCode, KeyEvent event) {
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
 
-		if(keyCode==KeyEvent.KEYCODE_BACK)
-		{
-			
-			Intent data=new Intent();
-			data.putExtra("username", username);
-			data.putExtra("pwd", pwd);
-			//finish必须在后面
-			setResult(0, data);
-			this.finish();
-			return true;
-		}
-		return super.onKeyDown(keyCode, event);
-	}
-	public void selectIcon(View view) {
-		// 打开系统图库，选择图片
-		Intent intent = new Intent(Intent.ACTION_PICK,
-				MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-		startActivityForResult(intent, 200);
-	}
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
 
-	@Click(R.id.btn_register_submit)
-	public void btn_register_submit() {
-		try {
-			btn_register_submit.setEnabled(false);
+            Intent data = new Intent();
+            data.putExtra("username", username);
+            data.putExtra("pwd", pwd);
+            //finish必须在后面
+            setResult(0, data);
+            this.finish();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 
-			Tools.showProgressDialog(RegisterActivity.this, "亲，正在为你注册");
-			 username = et_register_username.getText().toString();
-			 pwd = et_register_password.getText().toString();
-			String name = et_register_name.getText().toString();
-			// 检查学员完成
+    public void selectIcon(View view) {
+        // 打开系统图库，选择图片
+        Intent intent = new Intent(Intent.ACTION_PICK,
+                MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        startActivityForResult(intent, 200);
+    }
 
-			// 带数据
-			UserEntity userEntity = new UserEntity();
-			userEntity.setUsername(username);
-			userEntity.setPassword(pwd);
-			userEntity.setName(name);
+    @Click(R.id.btn_register_submit)
+    public void btn_register_submit() {
+        try {
+            btn_register_submit.setEnabled(false);
 
-			// 用intent不能直接带图片，带byte[]
+            Tools.showProgressDialog(RegisterActivity.this, "亲，正在为你注册");
+            username = et_register_username.getText().toString();
+            pwd = et_register_password.getText().toString();
+            String name = et_register_name.getText().toString();
+            // 检查学员完成
+
+            // 带数据
+            UserEntity userEntity = new UserEntity();
+            userEntity.setUsername(username);
+            userEntity.setPassword(pwd);
+            userEntity.setName(name);
+
+            // 用intent不能直接带图片，带byte[]
 //			ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
 //			bitmap.compress(CompressFormat.PNG, 10, byteArrayOutputStream);
 //			byte[] imageData = byteArrayOutputStream.toByteArray();
-			callBiz(userEntity);
-		} catch (Exception e) {
-		}
-	}
+            callBiz(userEntity);
+        } catch (Exception e) {
+        }
+    }
 
-	@Background
-	public void callBiz(UserEntity userEntity) {
-		RegisterBiz registerBiz = new RegisterBiz();
-		registerBiz.register(this, userEntity);
-	}
+    @Background
+    public void callBiz(UserEntity userEntity) {
+        RegisterBiz registerBiz = new RegisterBiz();
+        registerBiz.register(this, userEntity);
+    }
 
-	/**
-	 * 执行startActivityForResult，打开系统图库，选择完图片后，执行onActivityResult
-	 */
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    /**
+     * 执行startActivityForResult，打开系统图库，选择完图片后，执行onActivityResult
+     */
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-		super.onActivityResult(requestCode, resultCode, data);
-		try {
-			if (requestCode == 200) {
-				// bitmap = MediaStore.Images.Media.getBitmap(
-				// getContentResolver(), data.getData());
-				// ivSelectIcon.setImageBitmap(bitmap);
+        super.onActivityResult(requestCode, resultCode, data);
+        try {
+            if (requestCode == 200) {
+                // bitmap = MediaStore.Images.Media.getBitmap(
+                // getContentResolver(), data.getData());
+                // ivSelectIcon.setImageBitmap(bitmap);
 
-				ImageCompress.CompressOptions options = new CompressOptions();
-				options.maxHeight = 40;
-				options.maxWidth = 40;
-				options.uri = data.getData();
+                ImageCompress.CompressOptions options = new CompressOptions();
+                options.maxHeight = 40;
+                options.maxWidth = 40;
+                options.uri = data.getData();
 
-				ImageCompress imageCompress = new ImageCompress();
-				bitmap = imageCompress.compressFromUri(this, options);
-				iv_register_selectIcon.setImageBitmap(bitmap);
+                ImageCompress imageCompress = new ImageCompress();
+                bitmap = imageCompress.compressFromUri(this, options);
+                iv_register_selectIcon.setImageBitmap(bitmap);
 
-			}
-		} catch (Exception e) {
-			// TODO: handle exception
-		}
-	}
+            }
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+    }
 
-	
 
-	@Override
-	protected void onDestroy() {
+    @Override
+    protected void onDestroy() {
 
-		super.onDestroy();		
-	}
+        super.onDestroy();
+    }
 
-	@UiThread
-	public void handleResult(int status) {
-		int threadId = (int) Thread.currentThread().getId();
+    @UiThread
+    public void handleResult(int status) {
+        int threadId = (int) Thread.currentThread().getId();
 
-		Tools.closeProgressDialog();
-		btn_register_submit.setEnabled(true);
-		if (status == Const.STATUS_OK) {
-			Toast.makeText(this, "注册成功", 2000).show();
-		} else {
-			Toast.makeText(this, "注册失败", 2000).show();
-		}
-	}
+        Tools.closeProgressDialog();
+        btn_register_submit.setEnabled(true);
+        if (status == Const.STATUS_OK) {
+            Toast.makeText(this, "注册成功", 2000).show();
+        } else {
+            Toast.makeText(this, "注册失败", 2000).show();
+        }
+    }
 
 }

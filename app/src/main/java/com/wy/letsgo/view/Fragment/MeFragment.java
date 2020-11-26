@@ -1,4 +1,4 @@
-package com.wy.letsgo.view;
+package com.wy.letsgo.view.Fragment;
 
 import java.io.File;
 import com.wy.letsgo.R;

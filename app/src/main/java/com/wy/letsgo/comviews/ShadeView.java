@@ -1,4 +1,4 @@
-package com.wy.letsgo.view;
+package com.wy.letsgo.comviews;
 
 import com.wy.letsgo.R;
 import com.wy.letsgo.util.DisplayUtil;

@@ -1,4 +1,4 @@
-<com.wy.letsgo.view.MyLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.wy.letsgo.comviews.MyLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:animation="http://schemas.android.com/apk/res-auto"
     xmlns:shade="http://schemas.android.com/apk/res-auto"
@@ -8,17 +8,17 @@
     android:orientation="vertical"
     tools:context=".MainActivity" >
 
-    <com.wy.letsgo.view.CenterLayout
+    <com.wy.letsgo.comviews.CenterLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
-        <com.wy.letsgo.view.AnimationView
+        <com.wy.letsgo.comviews.AnimationView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             animation:images="@array/animationImages"
             animation:sleep_time="200" />
 
-        <com.wy.letsgo.view.ShadeView
+        <com.wy.letsgo.comviews.ShadeView
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -26,6 +26,6 @@
             shade:text="运动伙伴  就选酷跑"
             shade:text_color="#FFFF0000"
             shade:text_size="24" />
-    </com.wy.letsgo.view.CenterLayout>
+    </com.wy.letsgo.comviews.CenterLayout>
 
-</com.wy.letsgo.view.MyLinearLayout>
+</com.wy.letsgo.comviews.MyLinearLayout>

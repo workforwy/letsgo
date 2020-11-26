@@ -7,7 +7,7 @@ import com.wy.letsgo.TApplication;
 
 /**
  * 心跳包，空包，维持连接
- * @author tarena
+ * @author wy
  *
  */
 public class SendNullPackage extends Thread{

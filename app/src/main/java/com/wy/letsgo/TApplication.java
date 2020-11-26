@@ -208,7 +208,7 @@ public class TApplication extends Application {
     /**
      * asmack发信息给openfire
      *
-     * @author tarena
+     * @author wy
      */
     class AllPackeInterceptor implements PacketInterceptor {
 

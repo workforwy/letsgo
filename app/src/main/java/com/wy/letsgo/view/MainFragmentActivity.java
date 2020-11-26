@@ -3,6 +3,10 @@ package com.wy.letsgo.view;
 import com.wy.letsgo.R;
 import com.wy.letsgo.TApplication;
 import com.wy.letsgo.util.ExceptionUtil;
+import com.wy.letsgo.view.Fragment.DiscoverFragment;
+import com.wy.letsgo.view.Fragment.MeFragment;
+import com.wy.letsgo.view.Fragment.MessageFragment;
+import com.wy.letsgo.view.Fragment.SportFragment;
 
 import android.os.Bundle;
 import android.view.View;

@@ -3,10 +3,10 @@ package com.wy.letsgo.util;
 import android.content.Context;
 
 public class DisplayUtil {
-	public static int sp2px(Context context, int sp) {
-		// metric 度量
-		// density 密度
-		float desity = context.getResources().getDisplayMetrics().scaledDensity;
-		return (int) (sp * desity + 0.5f);
-	}
+    public static int sp2px(Context context, int sp) {
+        // metric 度量
+        // density 密度
+        float desity = context.getResources().getDisplayMetrics().scaledDensity;
+        return (int) (sp * desity + 0.5f);
+    }
 }

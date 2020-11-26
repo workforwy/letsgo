@@ -1,4 +1,4 @@
-package com.wy.letsgo.view;
+package com.wy.letsgo.view.Fragment;
 
 import com.wy.letsgo.R;
 import com.wy.letsgo.TApplication;

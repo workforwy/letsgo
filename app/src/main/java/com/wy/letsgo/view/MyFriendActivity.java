@@ -9,6 +9,7 @@ import org.jivesoftware.smack.RosterGroup;
 import com.wy.letsgo.R;
 import com.wy.letsgo.TApplication;
 import com.wy.letsgo.adapter.MyFriendAdapter;
+import com.wy.letsgo.base.BaseActivity;
 import com.wy.letsgo.util.ExceptionUtil;
 
 import android.content.Intent;

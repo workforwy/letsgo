@@ -3,50 +3,51 @@ package com.wy.letsgo.entity;
 import java.io.Serializable;
 
 public class VersionEntity implements Serializable {
-	public String status;
-	public String apkUrl;
-	public String msg;
-	public String changeLog;
-	public String version;
 
-	public void setStatus(String status) {
-		this.status = status;
-	}
+    public String status;
+    public String apkUrl;
+    public String msg;
+    public String changeLog;
+    public String version;
 
-	public String getStatus() {
-		return this.status;
-	}
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
-	public void setApkUrl(String apkUrl) {
-		this.apkUrl = apkUrl;
-	}
+    public String getStatus() {
+        return this.status;
+    }
 
-	public String getApkUrl() {
-		return this.apkUrl;
-	}
+    public void setApkUrl(String apkUrl) {
+        this.apkUrl = apkUrl;
+    }
 
-	public void setMsg(String msg) {
-		this.msg = msg;
-	}
+    public String getApkUrl() {
+        return this.apkUrl;
+    }
 
-	public String getMsg() {
-		return this.msg;
-	}
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
 
-	public void setVersion(String version) {
-		this.version = version;
-	}
+    public String getMsg() {
+        return this.msg;
+    }
 
-	public String getVersion() {
-		return this.version;
-	}
+    public void setVersion(String version) {
+        this.version = version;
+    }
 
-	public void setChangeLog(String changeLog) {
-		this.changeLog = changeLog;
-	}
+    public String getVersion() {
+        return this.version;
+    }
 
-	public String getChangeLog() {
-		return this.changeLog;
-	}
+    public void setChangeLog(String changeLog) {
+        this.changeLog = changeLog;
+    }
+
+    public String getChangeLog() {
+        return this.changeLog;
+    }
 
 }
