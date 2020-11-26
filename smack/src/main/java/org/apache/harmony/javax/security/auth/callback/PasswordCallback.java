@@ -15,7 +15,7 @@
  *  limitations under the License.
  */
 
-package org.apache.security.auth.callback;
+package org.apache.harmony.javax.security.auth.callback;
 
 import java.io.Serializable;
 import java.util.Arrays;

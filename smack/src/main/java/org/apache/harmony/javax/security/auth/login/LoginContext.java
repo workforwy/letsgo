@@ -15,7 +15,7 @@
  *  limitations under the License.
  */
 
-package org.apache.security.auth.login;
+package org.apache.harmony.javax.security.auth.login;
 
 import java.io.IOException;
 import java.security.AccessController;
@@ -27,14 +27,14 @@ import java.security.Security;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.security.auth.Subject;
-import org.apache.security.auth.callback.CallbackHandler;
-import org.apache.security.auth.callback.Callback;
-import org.apache.security.auth.callback.UnsupportedCallbackException;
-import org.apache.security.auth.spi.LoginModule;
-import org.apache.security.auth.AuthPermission;
+import org.apache.harmony.javax.security.auth.Subject;
+import org.apache.harmony.javax.security.auth.callback.CallbackHandler;
+import org.apache.harmony.javax.security.auth.callback.Callback;
+import org.apache.harmony.javax.security.auth.callback.UnsupportedCallbackException;
+import org.apache.harmony.javax.security.auth.spi.LoginModule;
+import org.apache.harmony.javax.security.auth.AuthPermission;
 
-import org.apache.security.auth.login.AppConfigurationEntry.LoginModuleControlFlag;
+import org.apache.harmony.javax.security.auth.login.AppConfigurationEntry.LoginModuleControlFlag;
 
 
 

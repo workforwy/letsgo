@@ -15,10 +15,10 @@
  *  limitations under the License.
  */
 
-package org.apache.security.sasl;
+package org.apache.harmony.javax.security.sasl;
 
 import java.io.Serializable;
-import org.apache.security.auth.callback.Callback;
+import org.apache.harmony.javax.security.auth.callback.Callback;
 
 public class AuthorizeCallback implements Callback, Serializable {
 

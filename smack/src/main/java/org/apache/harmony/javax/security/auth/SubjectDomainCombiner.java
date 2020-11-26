@@ -15,7 +15,7 @@
  *  limitations under the License.
  */
 
-package org.apache.security.auth;
+package org.apache.harmony.javax.security.auth;
 
 import java.security.DomainCombiner;
 import java.security.Principal;

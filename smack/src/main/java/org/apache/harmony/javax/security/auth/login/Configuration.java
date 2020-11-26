@@ -15,10 +15,9 @@
  *  limitations under the License.
  */
 
-package org.apache.security.auth.login;
+package org.apache.harmony.javax.security.auth.login;
 
-import java.security.AccessController;
-import org.apache.security.auth.AuthPermission;
+import org.apache.harmony.javax.security.auth.AuthPermission;
 
 public abstract class Configuration {
 

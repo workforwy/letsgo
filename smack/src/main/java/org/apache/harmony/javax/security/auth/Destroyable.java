@@ -15,7 +15,7 @@
  *  limitations under the License.
  */
 
-package org.apache.security.auth;
+package org.apache.harmony.javax.security.auth;
 
 /**
  * Allows for special treatment of sensitive information, when it comes to

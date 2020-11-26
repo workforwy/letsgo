@@ -15,9 +15,9 @@
  *  limitations under the License.
  */
 
-package org.apache.security.sasl;
+package org.apache.harmony.javax.security.sasl;
 
-import org.apache.security.auth.callback.ChoiceCallback;
+import org.apache.harmony.javax.security.auth.callback.ChoiceCallback;
 
 public class RealmChoiceCallback extends ChoiceCallback {
 

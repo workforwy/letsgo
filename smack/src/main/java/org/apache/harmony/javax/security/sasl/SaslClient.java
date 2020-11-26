@@ -15,7 +15,7 @@
  *  limitations under the License.
  */
 
-package org.apache.security.sasl;
+package org.apache.harmony.javax.security.sasl;
 
 public interface SaslClient {
 

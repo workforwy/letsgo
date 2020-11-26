@@ -20,7 +20,7 @@
 package org.apache.qpid.management.common.sasl;
 
 import java.io.*;
-import org.apache.security.auth.callback.*;
+import org.apache.harmony.javax.security.auth.callback.*;
 
 public class UserPasswordCallbackHandler implements CallbackHandler
 {

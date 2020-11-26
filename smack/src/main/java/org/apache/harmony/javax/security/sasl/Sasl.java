@@ -15,11 +15,11 @@
  *  limitations under the License.
  */
 
-package org.apache.security.sasl;
+package org.apache.harmony.javax.security.sasl;
 
 import java.security.Provider;
 import java.security.Security;
-import org.apache.security.auth.callback.CallbackHandler;
+import org.apache.harmony.javax.security.auth.callback.CallbackHandler;
 
 
 

@@ -22,10 +22,10 @@ package org.apache.qpid.management.common.sasl;
 
 import java.util.Map;
 
-import org.apache.security.auth.callback.CallbackHandler;
-import org.apache.security.sasl.SaslClient;
-import org.apache.security.sasl.SaslClientFactory;
-import org.apache.security.sasl.SaslException;
+import org.apache.harmony.javax.security.auth.callback.CallbackHandler;
+import org.apache.harmony.javax.security.sasl.SaslClient;
+import org.apache.harmony.javax.security.sasl.SaslClientFactory;
+import org.apache.harmony.javax.security.sasl.SaslException;
 
 public class ClientSaslFactory implements SaslClientFactory
 {

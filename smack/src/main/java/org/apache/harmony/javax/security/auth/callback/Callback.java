@@ -15,7 +15,7 @@
  *  limitations under the License.
  */
 
-package org.apache.security.auth.callback;
+package org.apache.harmony.javax.security.auth.callback;
 
 /**
  * Defines an empty base interface for all {@code Callback}s used during

@@ -23,7 +23,7 @@ android {
         }
     }
 
-    useLibrary 'org.apache.http.legacy'
+
 
     sourceSets {
         main {
@@ -34,15 +34,20 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation files('libs/androidannotations-api-3.3.2.jar')
     implementation files('libs/BaiduLBS_Android.jar')
     implementation files('libs/showGif.jar')
-    implementation 'com.alibaba:fastjson:1.2.75'
     implementation project(path: ':pullToRefresh')
     implementation project(path: ':pullToRefresh2')
     implementation project(path: ':progressButton')
+    implementation project(path: ':smack')
     implementation project(path: ':xutils')
+    implementation project(path: ':smack')
+    implementation project(path: ':smack')
+
+    implementation 'com.alibaba:fastjson:1.2.75'
     implementation 'androidx.fragment:fragment:1.2.5'
+
 }

@@ -26,8 +26,8 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.HashMap;
 import de.measite.smack.Sasl;
-import org.apache.security.sasl.SaslClient;
-import org.apache.security.auth.callback.CallbackHandler;
+import org.apache.harmony.javax.security.sasl.SaslClient;
+import org.apache.harmony.javax.security.auth.callback.CallbackHandler;
 
 /**
  * Implementation of the SASL GSSAPI mechanism

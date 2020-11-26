@@ -15,13 +15,13 @@
  *  limitations under the License.
  */
 
-package org.apache.security.auth.spi;
+package org.apache.harmony.javax.security.auth.spi;
 
 import java.util.Map;
 
-import org.apache.security.auth.Subject;
-import org.apache.security.auth.callback.CallbackHandler;
-import org.apache.security.auth.login.LoginException;
+import org.apache.harmony.javax.security.auth.Subject;
+import org.apache.harmony.javax.security.auth.callback.CallbackHandler;
+import org.apache.harmony.javax.security.auth.login.LoginException;
 
 public interface LoginModule {
 

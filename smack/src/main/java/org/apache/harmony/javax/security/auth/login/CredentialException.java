@@ -15,7 +15,7 @@
  *  limitations under the License.
  */
 
-package org.apache.security.auth.login;
+package org.apache.harmony.javax.security.auth.login;
 
 public class CredentialException extends LoginException {
 

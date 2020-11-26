@@ -15,9 +15,9 @@
  *  limitations under the License.
  */
 
-package org.apache.security.sasl;
+package org.apache.harmony.javax.security.sasl;
 
-import org.apache.security.auth.callback.TextInputCallback;
+import org.apache.harmony.javax.security.auth.callback.TextInputCallback;
 
 public class RealmCallback extends TextInputCallback {
 

@@ -25,11 +25,11 @@ import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-import org.apache.security.auth.callback.Callback;
-import org.apache.security.auth.callback.CallbackHandler;
-import org.apache.security.auth.callback.NameCallback;
-import org.apache.security.auth.callback.PasswordCallback;
-import org.apache.security.auth.callback.UnsupportedCallbackException;
+import org.apache.harmony.javax.security.auth.callback.Callback;
+import org.apache.harmony.javax.security.auth.callback.CallbackHandler;
+import org.apache.harmony.javax.security.auth.callback.NameCallback;
+import org.apache.harmony.javax.security.auth.callback.PasswordCallback;
+import org.apache.harmony.javax.security.auth.callback.UnsupportedCallbackException;
 
 
 public class UsernameHashedPasswordCallbackHandler implements CallbackHandler

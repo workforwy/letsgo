@@ -23,7 +23,7 @@ package org.apache.qpid.management.common.sasl;
 import java.security.Provider;
 import java.util.Map;
 
-import org.apache.security.sasl.SaslClientFactory;
+import org.apache.harmony.javax.security.sasl.SaslClientFactory;
 
 public class JCAProvider extends Provider
 {

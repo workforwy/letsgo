@@ -28,16 +28,16 @@ import org.jivesoftware.smack.util.Base64;
 import java.io.IOException;
 import java.util.Map;
 import java.util.HashMap;
-import org.apache.security.auth.callback.CallbackHandler;
-import org.apache.security.auth.callback.UnsupportedCallbackException;
-import org.apache.security.auth.callback.Callback;
-import org.apache.security.auth.callback.NameCallback;
-import org.apache.security.auth.callback.PasswordCallback;
-import org.apache.security.sasl.RealmCallback;
-import org.apache.security.sasl.RealmChoiceCallback;
+import org.apache.harmony.javax.security.auth.callback.CallbackHandler;
+import org.apache.harmony.javax.security.auth.callback.UnsupportedCallbackException;
+import org.apache.harmony.javax.security.auth.callback.Callback;
+import org.apache.harmony.javax.security.auth.callback.NameCallback;
+import org.apache.harmony.javax.security.auth.callback.PasswordCallback;
+import org.apache.harmony.javax.security.sasl.RealmCallback;
+import org.apache.harmony.javax.security.sasl.RealmChoiceCallback;
 import de.measite.smack.Sasl;
-import org.apache.security.sasl.SaslClient;
-import org.apache.security.sasl.SaslException;
+import org.apache.harmony.javax.security.sasl.SaslClient;
+import org.apache.harmony.javax.security.sasl.SaslException;
 
 /**
  * Base class for SASL mechanisms. Subclasses must implement these methods:

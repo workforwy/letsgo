@@ -15,7 +15,7 @@
  *  limitations under the License.
  */
 
-package org.apache.security.auth.callback;
+package org.apache.harmony.javax.security.auth.callback;
 
 /**
  * Thrown when a {@link CallbackHandler} does not support a particular {@link
