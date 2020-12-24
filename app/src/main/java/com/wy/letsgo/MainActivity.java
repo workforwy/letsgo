@@ -35,28 +35,8 @@ public class MainActivity extends Activity {
 
                 }
             }, 1000);
-            UserEntity userEntity = null;
-            LogUtil.i("", userEntity.getGroup());
         } catch (Exception e) {
             ExceptionUtil.handleException(e);
         }
-        //testLog();
-    }
-
-    private void testLog() {
-        long startTime = 0, endTime = 0;
-        startTime = System.currentTimeMillis();
-        for (int i = 0; i < 10000; i++) {
-            Log.i("testLog", "i=" + i);
-        }
-        endTime = System.currentTimeMillis();
-        Log.i("testLog", "time=" + (endTime - startTime));
-
-        startTime = System.currentTimeMillis();
-        for (int i = 0; i < 10000; i++) {
-            //Log.i("testLog","i="+i);
-        }
-        endTime = System.currentTimeMillis();
-        Log.i("testLog", "time=" + (endTime - startTime));
     }
 }

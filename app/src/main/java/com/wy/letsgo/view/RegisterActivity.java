@@ -27,21 +27,24 @@ import android.widget.Toast;
 
 @EActivity(R.layout.activity_register)
 public class RegisterActivity extends Activity {
+
     @ViewById
-    EditText et_register_username, et_register_password,
-            et_register_confirm_password, et_register_name;
+    EditText et_register_username,
+            et_register_password,
+            et_register_confirm_password,
+            et_register_name;
     @ViewById
     Button btn_register_submit;
+
     @ViewById
     ImageView iv_register_selectIcon;
+
     private Bitmap bitmap;
     String username, pwd;
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-
             Intent data = new Intent();
             data.putExtra("username", username);
             data.putExtra("pwd", pwd);
@@ -53,10 +56,13 @@ public class RegisterActivity extends Activity {
         return super.onKeyDown(keyCode, event);
     }
 
+    /**
+     * 打开系统图库，选择图片
+     *
+     * @param view
+     */
     public void selectIcon(View view) {
-        // 打开系统图库，选择图片
-        Intent intent = new Intent(Intent.ACTION_PICK,
-                MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         startActivityForResult(intent, 200);
     }
 
@@ -64,7 +70,6 @@ public class RegisterActivity extends Activity {
     public void btn_register_submit() {
         try {
             btn_register_submit.setEnabled(false);
-
             Tools.showProgressDialog(RegisterActivity.this, "亲，正在为你注册");
             username = et_register_username.getText().toString();
             pwd = et_register_password.getText().toString();

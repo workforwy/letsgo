@@ -1,3 +1,4 @@
+include ':showgif'
 include ':xutils'
 include ':pullToRefresh2'
 include ':pullToRefresh'

@@ -5,8 +5,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.jivesoftware.smack.packet.Message;
 
-import pl.droidsonroids.gif.GifDrawable;
-import pl.droidsonroids.gif.GifImageView;
+import com.wy.showgif.GifDrawable;
+import com.wy.showgif.GifImageView;
 import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;

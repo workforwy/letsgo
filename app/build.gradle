@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "30.0.2"
 
     aaptOptions.cruncherEnabled = false
     aaptOptions.useNewCruncher = false
@@ -14,7 +13,6 @@ android {
     defaultConfig {
         applicationId "com.wy.letsgo"
         minSdkVersion 16
-
     }
     buildTypes {
         release {
@@ -31,23 +29,22 @@ android {
             aidl.srcDirs = ['src/main/aidl']
         }
     }
+
 }
+
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation files('libs/androidannotations-api-3.3.2.jar')
     implementation files('libs/BaiduLBS_Android.jar')
-    implementation files('libs/showGif.jar')
     implementation project(path: ':pullToRefresh')
     implementation project(path: ':pullToRefresh2')
     implementation project(path: ':progressButton')
-    implementation project(path: ':smack')
     implementation project(path: ':xutils')
     implementation project(path: ':smack')
-    implementation project(path: ':smack')
+    implementation project(path: ':showgif')
 
     implementation 'com.alibaba:fastjson:1.2.75'
     implementation 'androidx.fragment:fragment:1.2.5'
-
 }

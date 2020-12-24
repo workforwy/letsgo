@@ -51,7 +51,7 @@
             android:required="false" />
 
         <activity
-            android:name="com.wy.letsgo.MainActivity"
+            android:name="com.wy.letsgo.view.MainFragmentActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -62,12 +62,13 @@
         <activity android:name="com.wy.letsgo.view.RegisterActivity" />
         <activity android:name="com.wy.letsgo.view.LoginActivity" />
         <activity android:name="com.wy.letsgo.view.MyFriendActivity" />
-        <activity android:name="com.wy.letsgo.view.MainFragmentActivity" />
+        <!--        <activity android:name="com.wy.letsgo.view.MainFragmentActivity" />-->
         <activity android:name="com.wy.letsgo.view.NearbyUserActivity" />
         <activity android:name="com.wy.letsgo.view.ClubActivity" />
         <activity android:name="com.wy.letsgo.view.ChatActivity" />
         <activity android:name="com.wy.letsgo.view.MallActivity" />
         <activity android:name="com.wy.letsgo.view.TopicActivity" />
+        <activity android:name="com.wy.letsgo.view.CreateTopicActivity" />
 
         <service android:name="com.wy.letsgo.service.JoinIntentService" />
 
@@ -95,10 +96,7 @@
             android:name="net.youmi.android.AdBrowser"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:theme="@android:style/Theme.NoTitleBar" />
-        <activity
-            android:name="com.wy.letsgo.view.CreateTopicActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation"
-            android:theme="@android:style/Theme.NoTitleBar" />
+
         <activity
             android:name=".view.InputRoomActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"

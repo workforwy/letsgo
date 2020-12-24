@@ -25,6 +25,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class LoginActivity extends BaseActivity {
+
     EditText etUserName, etPassword;
     Button tvToRegister;
     CircularProgressButton btn;
@@ -34,25 +35,16 @@ public class LoginActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
-        try {
-            NetworkUtil.checkNetworkState(this);
-
-            setContentView(R.layout.activity_login);
-            setView();
-            addListener();
-            loginReceiver = new LoginReceiver();
-            this.registerReceiver(loginReceiver, new IntentFilter(
-                    Const.ACTION_LOGIN));
-            for (int i = 0; i < 10000; i++) {
-                TApplication.listUserEntity.add(new UserEntity());
-            }
-        } catch (Exception e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+        setContentView(R.layout.activity_login);
+        NetworkUtil.checkNetworkState(this);
+        setView();
+        addListener();
+        loginReceiver = new LoginReceiver();
+        this.registerReceiver(loginReceiver, new IntentFilter(Const.ACTION_LOGIN));
+        for (int i = 0; i < 10000; i++) {
+            TApplication.listUserEntity.add(new UserEntity());
         }
-
     }
 
     @Override
@@ -65,13 +57,11 @@ public class LoginActivity extends BaseActivity {
         MyListener myListener = new MyListener();
         btn.setOnClickListener(myListener);
         tvToRegister.setOnClickListener(myListener);
-
     }
 
     private void setView() {
         etUserName = (EditText) findViewById(R.id.et_login_username);
         etPassword = (EditText) findViewById(R.id.et_login_password);
-
         btn = (CircularProgressButton) findViewById(R.id.btn_login_submit);
         btn.setIndeterminateProgressMode(true);
         btn.setProgress(0);
@@ -80,7 +70,6 @@ public class LoginActivity extends BaseActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
         super.onActivityResult(requestCode, resultCode, data);
         try {
             if (requestCode == 100 && resultCode == 0) {
@@ -90,7 +79,6 @@ public class LoginActivity extends BaseActivity {
                 etPassword.setText(pwd);
             }
         } catch (Exception e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
@@ -101,8 +89,7 @@ public class LoginActivity extends BaseActivity {
         public void onClick(View v) {
 
             if (v.getId() == R.id.btn_login_register) {
-                startActivityForResult(new Intent(LoginActivity.this,
-                        RegisterActivity.class), 100);
+                startActivityForResult(new Intent(LoginActivity.this, RegisterActivity.class), 100);
             }
             if (v.getId() == R.id.btn_login_submit) {
 
@@ -184,12 +171,9 @@ public class LoginActivity extends BaseActivity {
 
             }
             new Handler().postDelayed(new Runnable() {
-
                 @Override
                 public void run() {
-
                     btn.setProgress(0);
-
                 }
             }, 1000);
         }

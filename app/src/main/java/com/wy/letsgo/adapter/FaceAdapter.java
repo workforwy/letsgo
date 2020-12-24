@@ -2,10 +2,9 @@ package com.wy.letsgo.adapter;
 
 import java.io.IOException;
 
-import pl.droidsonroids.gif.GifDrawable;
-import pl.droidsonroids.gif.GifImageView;
-
 import com.wy.letsgo.R;
+import com.wy.showgif.GifDrawable;
+import com.wy.showgif.GifImageView;
 
 import android.content.Context;
 import android.view.View;
