@@ -16,7 +16,6 @@ import org.jivesoftware.smack.packet.RosterPacket.Item;
 import org.jivesoftware.smack.packet.RosterPacket.ItemType;
 import org.jivesoftware.smackx.muc.MultiUserChat;
 
-import com.baidu.mapapi.SDKInitializer;
 import com.wy.xutils.HttpUtils;
 import com.wy.xutils.exception.HttpException;
 import com.wy.xutils.http.ResponseInfo;

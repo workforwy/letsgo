@@ -14,7 +14,6 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -68,7 +67,7 @@
         <activity android:name="com.wy.letsgo.view.ChatActivity" />
         <activity android:name="com.wy.letsgo.view.MallActivity" />
         <activity android:name="com.wy.letsgo.view.TopicActivity" />
-        <activity android:name="com.wy.letsgo.view.CreateTopicActivity" />
+<!--        <activity android:name="com.wy.letsgo.view.CreateTopicActivity" />-->
 
         <service android:name="com.wy.letsgo.service.JoinIntentService" />
 
@@ -82,56 +81,5 @@
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>
         </receiver>
-        <!-- apikey必须用自己的，与证书有关debug.keystore -->
-        <meta-data
-            android:name="com.baidu.lbsapi.API_KEY"
-            android:value="1Pa1wGng2GVVN584reKdSFBa" />
-        <service
-            android:name="com.baidu.location.f"
-            android:enabled="true"
-            android:process=":remote" />
-
-        <!-- SDK 必须配置 -->
-        <activity
-            android:name="net.youmi.android.AdBrowser"
-            android:configChanges="keyboard|keyboardHidden|orientation"
-            android:theme="@android:style/Theme.NoTitleBar" />
-
-        <activity
-            android:name=".view.InputRoomActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation"
-            android:theme="@android:style/Theme.NoTitleBar" />
-        <activity
-            android:name=".view.GroupChatActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation"
-            android:theme="@android:style/Theme.NoTitleBar" />
-
-        <service
-            android:name="net.youmi.android.AdService"
-            android:exported="false" />
-
-        <receiver
-            android:name="net.youmi.android.AdReceiver"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="android.intent.action.PACKAGE_ADDED" />
-                <data android:scheme="package" />
-            </intent-filter>
-        </receiver>
-        <!-- /SDK 必须配置 -->
-        <!-- 积分广告必须配置 -->
-        <receiver
-            android:name="net.youmi.android.offers.OffersReceiver"
-            android:exported="false" />
-        <!-- ／积分广告必须配置 -->
-        <!-- SmartBanner广告必须配置 -->
-        <activity
-            android:name="net.youmi.android.SmartBannerActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation" />
-
-        <service
-            android:name="net.youmi.android.SmartBannerService"
-            android:exported="false" />
-
     </application>
 </manifest>
