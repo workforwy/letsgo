@@ -16,6 +16,8 @@ import org.jivesoftware.smack.packet.RosterPacket.Item;
 import org.jivesoftware.smack.packet.RosterPacket.ItemType;
 import org.jivesoftware.smackx.muc.MultiUserChat;
 
+import com.baidu.mapapi.CoordType;
+import com.baidu.mapapi.SDKInitializer;
 import com.wy.xutils.HttpUtils;
 import com.wy.xutils.exception.HttpException;
 import com.wy.xutils.http.ResponseInfo;
@@ -99,10 +101,18 @@ public class TApplication extends Application {
             connectChatServer();
 
             // 初始化地图
-//            SDKInitializer.initialize(this);
+            initMap();
         } catch (Exception e) {
             // TODO: handle exception
         }
+    }
+
+    private void initMap(){
+        //在使用SDK各组件之前初始化context信息，传入ApplicationContext
+        SDKInitializer.initialize(this);
+        //自4.3.0起，百度地图SDK所有接口均支持百度坐标和国测局坐标，用此方法设置您使用的坐标类型.
+        //包括BD09LL和GCJ02两种坐标，默认是BD09LL坐标。
+        SDKInitializer.setCoordType(CoordType.BD09LL);
     }
 
     private void testM_juHe_cn() {
@@ -195,7 +205,7 @@ public class TApplication extends Application {
 
     }
 
-    void registerInterceptorListener() {
+  private   void registerInterceptorListener() {
         // 让框架的接口指向实现类
         AllPackeInterceptor allPackeInterceptor = new AllPackeInterceptor();
         xmppConnection.addPacketInterceptor(allPackeInterceptor, null);

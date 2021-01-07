@@ -2,6 +2,7 @@ package com.wy.letsgo.view.Fragment;
 
 import java.util.ArrayList;
 
+import com.baidu.location.BDAbstractLocationListener;
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
@@ -15,6 +16,7 @@ import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.map.BaiduMap.OnMapClickListener;
 import com.baidu.mapapi.map.MyLocationConfiguration.LocationMode;
+import com.baidu.mapapi.map.MyLocationData;
 import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.map.PolylineOptions;
 import com.baidu.mapapi.model.LatLng;
@@ -41,20 +43,14 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 
 public class SportFragment extends Fragment {
+
     public double longitude = 116.471533;
     public double latitude = 39.881906;
     LocationClient locationClient;
     MapView mapView;
-    private LocationMode mCurrentMode;
-
     BaiduMap baiduMap;
-
-    static BDLocation lastLocation = null;
-    View view = null;
     RelativeLayout relativeLayoutStartSport, relativeLayoutTitle;
-    PopupWindow popupWindow;
     AlertDialog dialogCounter;
-
     TextView tvCounter;
     int count = 3;
     Handler handler = new Handler();
@@ -65,18 +61,14 @@ public class SportFragment extends Fragment {
     TextView tvOperation;
     Runnable runnable;
 
+    View view;
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        try {
-            view = inflater.inflate(R.layout.fragment_sport, container, false);
-            setupView();
-            addListener();
-            return view;
-        } catch (Exception e) {
-            ExceptionUtil.handleException(e);
-        }
-        return null;
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.fragment_sport, container, false);
+        setupView();
+        addListener();
+        return view;
     }
 
     private void addListener() {
@@ -92,10 +84,8 @@ public class SportFragment extends Fragment {
                 } else if (ll_sport_recorder.getVisibility() == View.GONE) {
                     tvOperation.setText("停止");
 
-                    dialogCounter = new AlertDialog.Builder(getActivity())
-                            .create();
-                    View view = View.inflate(getActivity(),
-                            R.layout.activity_show_counter, null);
+                    dialogCounter = new AlertDialog.Builder(getActivity()).create();
+                    View view = View.inflate(getActivity(), R.layout.activity_show_counter, null);
                     dialogCounter.setView(view);
 
                     tvCounter = (TextView) view
@@ -124,23 +114,18 @@ public class SportFragment extends Fragment {
                 }
             }
         });
-
-
     }
 
     private void showRecorder() {
 
         ll_sport_recorder.setVisibility(View.VISIBLE);
         // 计算时间
-        final Chronometer chronometer = (Chronometer) view
-                .findViewById(R.id.chronometer1);
+        final Chronometer chronometer = (Chronometer) view.findViewById(R.id.chronometer1);
         chronometer.start();
         chronometer.setBase(SystemClock.elapsedRealtime());
-        final TextView tvDistance = (TextView) view
-                .findViewById(R.id.tv_distance);
+        final TextView tvDistance = (TextView) view.findViewById(R.id.tv_distance);
         tvDistance.setText("0.00");
-        final TextView tvSpeed = (TextView) view
-                .findViewById(R.id.tv_recorder_speed);
+        final TextView tvSpeed = (TextView) view.findViewById(R.id.tv_recorder_speed);
         tvSpeed.setText("0.00");
 
         runnable = new Runnable() {
@@ -204,11 +189,12 @@ public class SportFragment extends Fragment {
     }
 
     private void setupView() {
-        tvOperation = (TextView) view.findViewById(R.id.tv_fragment_sport_operation);
-        ll_sport_recorder = (LinearLayout) view
-                .findViewById(R.id.ll_sport_recorder);
-        mapView = (MapView) view.findViewById(R.id.mapView);
+        tvOperation = view.findViewById(R.id.tv_fragment_sport_operation);
+        ll_sport_recorder = view.findViewById(R.id.ll_sport_recorder);
+        mapView = view.findViewById(R.id.mapView);
         baiduMap = mapView.getMap();
+        baiduMap.setMyLocationEnabled(true);
+
 
         locationClient = new LocationClient(this.getActivity());
         MyLocationListener myLocationListener = new MyLocationListener();
@@ -226,21 +212,15 @@ public class SportFragment extends Fragment {
             @Override
             public void onMapPoiClick(MapPoi mapPoi) {
 
-//                return false;
             }
 
             @Override
             public void onMapClick(LatLng clickedPosition) {
-
                 listPoints.add(clickedPosition);
-
                 baiduMap.clear();
-
                 if (listPoints.size() >= 2) {
                     // 画线
-
-                    OverlayOptions lineOptions = new PolylineOptions()
-                            .points(listPoints);
+                    OverlayOptions lineOptions = new PolylineOptions().points(listPoints);
                     // 把线显示在地图上
                     baiduMap.addOverlay(lineOptions);
                 }
@@ -256,7 +236,6 @@ public class SportFragment extends Fragment {
 
     @Override
     public void onResume() {
-
         super.onResume();
         try {
             locationClient.start();
