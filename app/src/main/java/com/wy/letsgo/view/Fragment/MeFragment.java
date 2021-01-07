@@ -5,7 +5,7 @@ import com.wy.letsgo.R;
 import com.wy.letsgo.TApplication;
 import com.wy.letsgo.biz.implAsmack.UpdateBiz;
 import com.wy.letsgo.entity.VersionEntity;
-import com.wy.letsgo.util.Const;
+import com.wy.letsgo.config.Const;
 import com.wy.letsgo.util.ExceptionUtil;
 import com.wy.letsgo.util.LogUtil;
 import com.wy.letsgo.util.Tools;

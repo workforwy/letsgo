@@ -3,7 +3,7 @@ package com.wy.letsgo.service;
 import org.jivesoftware.smackx.muc.MultiUserChat;
 
 import com.wy.letsgo.TApplication;
-import com.wy.letsgo.util.Const;
+import com.wy.letsgo.config.Const;
 
 import android.app.IntentService;
 import android.app.PendingIntent;

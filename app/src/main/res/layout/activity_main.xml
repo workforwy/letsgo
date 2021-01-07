@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/first_bg_9"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".view.SplashActivity">
 
     <com.wy.letsgo.comviews.CenterLayout
         android:layout_width="match_parent"

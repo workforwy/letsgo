@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import com.wy.xutils.BitmapUtils;
 import com.wy.letsgo.R;
 import com.wy.letsgo.TApplication;
-import com.wy.letsgo.biz.implAsmack.AddFrindBiz;
+import com.wy.letsgo.service.AddFriendService;
 import com.wy.letsgo.entity.UserEntity;
-import com.wy.letsgo.util.Const;
+import com.wy.letsgo.config.Const;
 import com.wy.letsgo.util.ExceptionUtil;
 
 import android.app.Activity;
@@ -108,7 +108,7 @@ public class NearbyUserAdapter extends BaseAdapter {
 								+ TApplication.serviceName);
 
 						Intent intentStartService = new Intent(context,
-								AddFrindBiz.class);
+								AddFriendService.class);
 						intentStartService.putExtra(Const.KEY_DATA, userEntity);
 
 						Intent intentToService = new Intent();

@@ -5,7 +5,7 @@ import org.jivesoftware.smack.packet.Message.Type;
 
 import com.wy.letsgo.TApplication;
 import com.wy.letsgo.entity.PrivateChatEntity;
-import com.wy.letsgo.util.Const;
+import com.wy.letsgo.config.Const;
 
 import android.content.Intent;
 

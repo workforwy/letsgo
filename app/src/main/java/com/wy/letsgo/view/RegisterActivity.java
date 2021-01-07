@@ -9,7 +9,7 @@ import org.androidannotations.annotations.ViewById;
 import com.wy.letsgo.R;
 import com.wy.letsgo.biz.implAsmack.RegisterBiz;
 import com.wy.letsgo.entity.UserEntity;
-import com.wy.letsgo.util.Const;
+import com.wy.letsgo.config.Const;
 import com.wy.letsgo.util.ImageCompress;
 import com.wy.letsgo.util.ImageCompress.CompressOptions;
 import com.wy.letsgo.util.Tools;

@@ -26,7 +26,7 @@ public class AnimationView extends View {
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.animation);
         sleepTime = (int) ta.getFloat(R.styleable.animation_sleep_time, 100);
 
-        TypedArray taImage = context.getResources().obtainTypedArray( R.array.animationImages);
+        TypedArray taImage = context.getResources().obtainTypedArray(R.array.animationImages);
         int length = taImage.length();
         bitmaps = new Bitmap[length];
         for (int i = 0; i < length; i++) {

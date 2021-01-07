@@ -56,7 +56,7 @@ import com.wy.letsgo.biz.implAsmack.PrivateChatBiz;
 import com.wy.letsgo.entity.GroupChatEntity;
 import com.wy.letsgo.entity.PrivateChatEntity;
 import com.wy.letsgo.util.ChatUtil;
-import com.wy.letsgo.util.Const;
+import com.wy.letsgo.config.Const;
 import com.wy.letsgo.util.ExceptionUtil;
 import com.wy.letsgo.util.ImageCompress;
 import com.wy.letsgo.util.LogUtil;

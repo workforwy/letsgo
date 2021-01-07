@@ -8,10 +8,10 @@ import android.os.Bundle;
 import androidx.activity.ComponentActivity;
 
 public class BaseActivity extends ComponentActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         TApplication.listActivity.add(this);
     }
-
 }

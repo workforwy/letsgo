@@ -3,7 +3,7 @@ package com.wy.letsgo.view.Fragment;
 import com.wy.letsgo.R;
 import com.wy.letsgo.TApplication;
 import com.wy.letsgo.adapter.MsgAdapter;
-import com.wy.letsgo.util.Const;
+import com.wy.letsgo.config.Const;
 import com.wy.letsgo.util.ExceptionUtil;
 
 import android.content.BroadcastReceiver;

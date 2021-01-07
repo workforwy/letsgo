@@ -77,10 +77,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".view.SplashActivity" />
         <activity android:name=".view.RegisterActivity" />
         <activity android:name=".view.LoginActivity" />
         <activity android:name=".view.MyFriendActivity" />
-        <!--        <activity android:name=".view.MainFragmentActivity" />-->
         <activity android:name=".view.NearbyUserActivity" />
         <activity android:name=".view.ClubActivity" />
         <activity android:name=".view.ChatActivity" />
@@ -90,14 +90,16 @@
 
         <service android:name=".service.JoinIntentService" />
 
-        <service android:name="com.baidu.location.f"
+        <service
+            android:name="com.baidu.location.f"
             android:enabled="true"
-            android:process=":remote"/>
+            android:process=":remote" />
 
         <service
             android:name=".biz.implAsmack.RegisterBiz"
             tools:ignore="Instantiatable" />
-        <service android:name=".biz.implAsmack.AddFrindBiz" />
+
+        <service android:name=".service.AddFriendService" />
 
         <receiver android:name=".receiver.NetworkStateChangedReceiver">
             <intent-filter>

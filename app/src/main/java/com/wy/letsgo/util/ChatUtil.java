@@ -3,6 +3,7 @@ package com.wy.letsgo.util;
 import java.io.File;
 
 import com.wy.letsgo.TApplication;
+import com.wy.letsgo.config.Const;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

@@ -13,7 +13,7 @@ import com.wy.xutils.http.client.HttpRequest.HttpMethod;
 import com.wy.letsgo.TApplication;
 import com.wy.letsgo.entity.UserEntity;
 import com.wy.letsgo.parser.NearbyParser;
-import com.wy.letsgo.util.Const;
+import com.wy.letsgo.config.Const;
 import com.wy.letsgo.util.LogUtil;
 import com.wy.letsgo.util.MD5Util;
 

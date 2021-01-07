@@ -2,7 +2,7 @@ package com.wy.letsgo.view;
 
 import com.wy.letsgo.base.BaseActivity;
 import com.wy.letsgo.service.JoinIntentService;
-import com.wy.letsgo.util.Const;
+import com.wy.letsgo.config.Const;
 import com.wy.letsgo.util.Tools;
 import com.wy.letsgo.R;
 

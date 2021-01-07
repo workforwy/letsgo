@@ -9,7 +9,7 @@ import com.wy.letsgo.TApplication;
 import com.wy.letsgo.adapter.TopicAdapter;
 import com.wy.letsgo.biz.implAsmack.TopicBiz;
 import com.wy.letsgo.entity.TopicEntity;
-import com.wy.letsgo.util.Const;
+import com.wy.letsgo.config.Const;
 import com.wy.letsgo.util.ExceptionUtil;
 import com.wy.letsgo.util.Tools;
 

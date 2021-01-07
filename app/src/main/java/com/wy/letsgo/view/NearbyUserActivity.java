@@ -14,7 +14,7 @@ import com.wy.letsgo.adapter.NearbyUserAdapter;
 import com.wy.letsgo.base.BaseActivity;
 import com.wy.letsgo.biz.implAsmack.NearbyUserBiz;
 import com.wy.letsgo.entity.UserEntity;
-import com.wy.letsgo.util.Const;
+import com.wy.letsgo.config.Const;
 import com.wy.letsgo.util.ExceptionUtil;
 import com.wy.letsgo.util.LogUtil;
 import com.wy.letsgo.util.Tools;

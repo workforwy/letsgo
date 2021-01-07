@@ -1,4 +1,4 @@
-package com.wy.letsgo.util;
+package com.wy.letsgo.config;
 
 import android.os.Environment;
 
