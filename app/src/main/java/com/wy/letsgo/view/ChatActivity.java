@@ -151,9 +151,9 @@ public class ChatActivity extends BaseActivity {
 		baiduMap.setOnMapClickListener(new OnMapClickListener() {
 
 			@Override
-			public boolean onMapPoiClick(MapPoi arg0) {
+			public void onMapPoiClick(MapPoi arg0) {
 
-				return false;
+//				return false;
 			}
 
 			@Override

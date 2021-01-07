@@ -12,6 +12,7 @@ android {
 
     defaultConfig {
         applicationId "com.wy.letsgo"
+        multiDexEnabled true
         minSdkVersion 16
     }
     buildTypes {
@@ -20,9 +21,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
-
-
-
     sourceSets {
         main {
             jniLibs.srcDirs = ['src/main/jniLibs']
@@ -31,7 +29,6 @@ android {
     }
 
 }
-
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -47,8 +44,11 @@ dependencies {
     implementation 'com.alibaba:fastjson:1.2.75'
     implementation 'androidx.fragment:fragment:1.2.5'
 
-    implementation 'com.amap.api:map2d:latest.integration'
-    implementation 'com.amap.api:location:latest.integration'
-    implementation 'com.amap.api:navi-3dmap:latest.integration'
-    implementation 'com.amap.api:search:latest.integration'
+//    implementation 'com.amap.api:map2d:latest.integration'
+//    implementation 'com.amap.api:location:latest.integration'
+//    implementation 'com.amap.api:navi-3dmap:latest.integration'
+//    implementation 'com.amap.api:search:latest.integration'
+    implementation files('libs/BaiduLBS_Android.jar')
+
+    implementation 'com.android.support:multidex'
 }

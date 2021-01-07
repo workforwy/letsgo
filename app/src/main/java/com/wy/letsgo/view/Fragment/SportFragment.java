@@ -224,9 +224,9 @@ public class SportFragment extends Fragment {
         baiduMap.setOnMapClickListener(new OnMapClickListener() {
 
             @Override
-            public boolean onMapPoiClick(MapPoi mapPoi) {
+            public void onMapPoiClick(MapPoi mapPoi) {
 
-                return false;
+//                return false;
             }
 
             @Override
